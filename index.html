@@ -117,7 +117,7 @@
     <nav class="navbar">
         <div class="max-width">
             <div class="logo">
-                <a href="#home"><strong>Sourodeep Paul Portfolio.</strong></a>
+                <a href="#home"><strong>SP Portfolio.</strong></a>
             </div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
@@ -167,7 +167,7 @@
 
       
 
-      <!-- Skills -->
+<!-- Skills -->
 <section class="skills" id="skills">
   <br class="max-width">
     <h2 class="title">Skills</h2>
@@ -197,49 +197,53 @@
   </div>
 </section>
 
-<!-- Education -->
-<section class="education" id="education">
+ <!-- Education -->
+ <section class="education" id="education">
   <div class="max-width">
     <h2 class="title">Education</h2>
-    <div class="education-content">
-      <div class="card">
-        <div class="box">
+    <div class="timeline">
+      <div class="container left">
+        <div class="icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="content">
           <div class="year">2017-2018</div>
-          <div class="text">
-            <h3>Madhyamik / 10th Standard</h3>
-            <p>Uttarpara Model School</p>
-            <p>Grade: 65.14%</p>
-          </div>
+          <h3>Madhyamik / 10th Standard</h3>
+          <p>Uttarpara Model School</p>
+          <p>Grade: 65.14%</p>
         </div>
       </div>
-      <div class="card">
-        <div class="box">
+      <div class="container right">
+        <div class="icon">
+          <i class="fas fa-school"></i>
+        </div>
+        <div class="content">
           <div class="year">2018-2019</div>
-          <div class="text">
-            <h3>Higher Secondary / 12th Standard</h3>
-            <p>Uttarpara Model School</p>
-            <p>Grade: 70.6%</p>
-          </div>
+          <h3>Higher Secondary / 12th Standard</h3>
+          <p>Uttarpara Model School</p>
+          <p>Grade: 70.6%</p>
         </div>
       </div>
-      <div class="card">
-        <div class="box">
+      <div class="container left">
+        <div class="icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="content">
           <div class="year">2019-2022</div>
-          <div class="text">
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>Techno India Hooghly</p>
-            <p>CGPA: 9.38</p>
-          </div>
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p>Techno India Hooghly</p>
+          <p>CGPA: 9.38</p>
         </div>
       </div>
-      <div class="card">
-        <div class="box">
+      <div class="container right">
+        <div class="icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <div class="content">
           <div class="year">2022-2024</div>
-          <div class="text">
-            <h3>Masters of Computer Applications (MCA)</h3>
-            <p>Techno International New Town</p>
-            <p>CGPA: 8.26</p>
-          </div>
+          <h3>Masters of Computer Applications (MCA)</h3>
+          <p>Techno International New Town</p>
+          <p>CGPA: 8.26</p>
         </div>
       </div>
     </div>
@@ -251,19 +255,22 @@
 <section class="certificates" id="certificates">
   <div class="max-width">
     <h2 class="title">Certificates</h2>
+    <div class="tagline">
+      <p>Internship, Course & Workshop Certificates</p>
+    </div>
     <div class="carousel owl-carousel">
       <img src="certificates/PSOM_Certificate.jpg" alt="Certificate 1">
       <img src="certificates/prodigy.jpg" alt="Certificate 2">
       <img src="certificates/oasis.png" alt="Certificate 3">
       <img src="certificates/bharat.jpg" alt="Certificate 4">
       <img src="certificates/cognifyz.jpg" alt="Certificate 5">
+      <img src="certificates/AI Tools.jpg" alt="Certificate 6">
+      <img src="certificates/Html css bootcamp.jpg" alt="Certificate 7">
     </div>
   </div>
 </section>
 
-
-      <!-- Projects -->
-     <!-- Projects -->
+<!-- Projects -->
 <section class="projects" id="projects">
   <div class="max-width">
       <h2 class="title">Projects</h2>
@@ -484,6 +491,25 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
       <script src="script.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const timelineItems = document.querySelectorAll(".container");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
       <script>
         document.addEventListener('DOMContentLoaded', () => {
           const counters = document.querySelectorAll('.counter');
